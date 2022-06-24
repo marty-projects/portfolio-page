@@ -1,11 +1,28 @@
 {
-  "name": "portfolio-page",
+  "name": "marty-homepage",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portfolio website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Martyna Chmielinska",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.2",
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "framer-motion": "^6.3.13",
+    "next": "^12.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-next": "^12.1.6",
+    "prettier": "^2.7.1"
+  }
 }
