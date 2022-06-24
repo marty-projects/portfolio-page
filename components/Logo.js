@@ -4,7 +4,8 @@ import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
-font-weight: bold;font-size: 18px;
+
+font-size: 18px;
 display: inline-flex;
 align-items: center;
 height: 30px;
