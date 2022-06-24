@@ -3,6 +3,7 @@ import {Container, Box, Heading, Image, Link, Button, useColorModeValue} from '@
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../components/Section'
 import Paragraph from '../components/Paragraph'
+import { BioSection, BioYear } from '../components/Bio'
 
 const Page = () => {
     return (
@@ -46,6 +47,29 @@ const Page = () => {
                     </Button>
                 </NextLink>
             </Box>
+        </Section>
+        <Section delay={0.2}>
+            <Heading as="h3" variant="section-title">
+            Bio
+            </Heading>
+            <BioSection>
+                <BioYear>
+                    2019
+                </BioYear>
+                Completed the Master&apos;s Program in Translation and International Communication at Jagiellonian University, Krakow, Poland.
+            </BioSection>
+            <BioSection>
+                <BioYear>
+                    2020-2022
+                </BioYear>
+                Work as a Freelance Translator
+            </BioSection>
+            <BioSection>
+                <BioYear>
+                    2022
+                </BioYear>
+                Started working as a Freelance Front End Developer
+            </BioSection>
         </Section>
     </Container>
     )
