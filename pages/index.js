@@ -1,12 +1,20 @@
 import NextLink from 'next/link'
-import {Container, Box, Heading, Image, Link, Button, useColorModeValue} from '@chakra-ui/react'
+import {Container, Box, Heading, Image, Link, List, ListItem, Button, SimpleGrid, Icon, useColorModeValue} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import Layout from '../components/Layouts/Article'
 import Section from '../components/Section'
 import Paragraph from '../components/Paragraph'
 import { BioSection, BioYear } from '../components/Bio'
+import { GridItem } from '../components/GridItem'
+import { 
+    IoLogoGithub,
+    IoLogoLinkedin,
+} from 'react-icons/io5'
+import thumbTetris from '../public/images/projects/tetris_eyecatch.png'
 
 const Page = () => {
     return (
+    <Layout>
     <Container>
         <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpa.200')} p={3} mb={6} align="center">
             Hello, I&apos;m a front-end developer based in EU!
@@ -40,7 +48,7 @@ const Page = () => {
             </NextLink>
             </Paragraph>
             <Box align="center" my={4}>
-                <NextLink href="/works">
+                <NextLink href="/projects">
                     <Button rightIcon={<ChevronRightIcon/>}
                     colorScheme="teal">
                     My Portfolio
@@ -71,7 +79,43 @@ const Page = () => {
                 Started working as a Freelance Front End Developer
             </BioSection>
         </Section>
+            <Section delay={0.3}>
+                <Paragraph>
+                    My interests include video games and art.
+                </Paragraph>
+            </Section>
+
+        <Section delay={0.3}>
+                <Heading as="h3" variant="section-title">
+                    On the web
+                </Heading>
+                <List>
+                    <ListItem>
+                        <Link href="http://github.com/monkert" target="_blank">
+                        <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub}/>}>
+                            @monkert
+                        </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                    <Link href="http://linkedin.com/" target="_blank">
+                        <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoLinkedin}/>}>
+                            Martyna Chmielinska
+                        </Button>
+                        </Link>
+                    </ListItem>
+                </List>
+                <SimpleGrid columns={[1,2,2]} gap={6}>
+                    <GridItem
+                    href="http://github.com"
+                    title="Tetris Clone"
+                    thumbnail = {thumbTetris} >
+                        A Tetris clone build with React Hooks.
+                    </GridItem>
+                </SimpleGrid>
+        </Section>
     </Container>
+    </Layout>
     )
 }
 
