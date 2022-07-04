@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={}
+self.__REACT_LOADABLE_MANIFEST={"../components/Layouts/Main.js -> ../VoxelAlien":{"id":"../components/Layouts/Main.js -> ../VoxelAlien","files":["static/chunks/components_VoxelAlien_js.js"]}}

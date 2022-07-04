@@ -1,12 +1,13 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay} from '@chakra-ui/react'
+import { Box, Text, Linkbox, LinkOverlay} from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
-export const GridItem = ({childre, href, title, thumbnail}) => (
+export const GridItem = ({children, href, title, thumbnail}) => (
     <Box w="100%" align="center">
-        <LinkBox cursor="pointer">
-            <Image src={thumbnail}
+        <Linkbox cursor="pointer">
+            <Image 
+                src={thumbnail}
                 alt={title}
                 className="grid-item-thumbnail"
                 placeholder="blur"
@@ -18,15 +19,16 @@ export const GridItem = ({childre, href, title, thumbnail}) => (
                 <Text fontSize={14}>
                     {children}
                 </Text>
-        </LinkBox>
+        </Linkbox>
     </Box>
 )
 
 export const ProjectGridItem = ({ children, id, title, thumbnail }) => (
     <Box w="100%" align="center">
-        <NextLink href={`/projects/${id}`}>
+        <NextLink href={`/projects/${id}`} passHref scroll={false}>
             <Linkbox cursor="pointer">
-                <Image src={thumbnail} alt={title} className="grid-item-thumbnail"
+                <Image src={thumbnail} alt={title} 
+                className="grid-item-thumbnail"
                 placeholder="blur"/>
             <LinkOverlay href={`/projects/${id}`}>
                 <Text mt={2} fontSize={20} >
@@ -42,7 +44,8 @@ export const ProjectGridItem = ({ children, id, title, thumbnail }) => (
 //DOES NOT WORK: FIND REPLACEMENT 4 @EMOTION-REACT
 
 export const GridItemStyle = () => (
-    <Global styles={`
+    <Global 
+    styles={`
     .grid-item-thumbnail {
         border-radius: 12px;
     }

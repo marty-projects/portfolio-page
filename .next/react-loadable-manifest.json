@@ -1,1 +1,8 @@
-{}
+{
+  "../components/Layouts/Main.js -> ../VoxelAlien": {
+    "id": "../components/Layouts/Main.js -> ../VoxelAlien",
+    "files": [
+      "static/chunks/components_VoxelAlien_js.js"
+    ]
+  }
+}

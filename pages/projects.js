@@ -1,9 +1,9 @@
-import { Container, Heading, SimpleGrid, Divider} from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid} from '@chakra-ui/react'
 import Section from '../components/Section'
 import { ProjectGridItem } from '../components/GridItem'
 import Layout from '../components/Layouts/Article'
-import thumbTetris from '../components/images/projects/tetris-eyecatch.png'
-import thumbSpaceInvaders from '../components/images/projects/space-invaders.png'
+import thumbTetris from './projects/project-tetris.js'
+import thumbSpaceInvaders from './projects/space-invaders.js'
 
 //CANNOT SEE
 const Projects = () => {
